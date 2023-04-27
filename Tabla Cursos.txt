@@ -1,0 +1,20 @@
+/*
+Tabla: cursos
+Almacena información de los cursos que toman los estudiantes, como el nombre del curso, código del curso y semestre.
+
+Datos de muestra:
+- 10 registros de cursos ficticios con nombres y códigos de curso.
+- Semestre en el que se imparte el curso.
+*/
+
+INSERT INTO cursos (nombre_curso, codigo_curso, semestre)
+VALUES ('Cálculo I', 'MAT101', 1),
+       ('Álgebra Lineal', 'MAT102', 1),
+       ('Física I', 'FIS101', 1),
+       ('Química', 'QUI101', 1),
+       ('Cálculo II', 'MAT201', 2),
+       ('Física II', 'FIS201', 2),
+       ('Estructuras de Datos', 'CS210', 2),
+       ('Programación Orientada a Objetos', 'CS220', 3),
+       ('Teoría de Circuitos', 'EE310', 3),
+       ('Métodos Numéricos', 'MAT301', 3);

@@ -1,0 +1,24 @@
+/*
+Tabla: recursos
+Almacena información de recursos compartidos por los estudiantes, incluyendo el título, el tipo de recurso, el enlace y el ID del curso asociado.
+
+Datos de muestra:
+- 12 registros de recursos ficticios.
+- Tipo de recurso: Libro, Video, Imagen, Otro.
+- Enlaces ficticios utilizando el acortador tinyurl.
+- ID del curso asociado.
+*/
+
+INSERT INTO recursos (id_curso, tipo_recurso, titulo, enlace)
+VALUES (1, 'Libro', 'Libro de Cálculo I', 'https://tinyurl.com/rec1libro'),
+       (1, 'Libro', 'Libro de Álgebra Lineal', 'https://tinyurl.com/rec2libro'),
+       (1, 'Video', 'Video tutorial de Física I', 'https://tinyurl.com/rec3video'),
+       (1, 'Video', 'Video tutorial de Química', 'https://tinyurl.com/rec4video'),
+       (2, 'Imagen', 'Infografía de Cálculo II', 'https://tinyurl.com/rec5imagen'),
+       (2, 'Imagen', 'Infografía de Física II', 'https://tinyurl.com/rec6imagen'),
+       (2, 'Otro', 'Apuntes de Estructuras de Datos', 'https://tinyurl.com/rec7otro'),
+       (3, 'Otro', 'Apuntes de Programación Orientada a Objetos', 'https://tinyurl.com/rec8otro'),
+       (3, 'Libro', 'Libro de Teoría de Circuitos', 'https://tinyurl.com/rec9libro'),
+       (3, 'Video', 'Video tutorial de Métodos Numéricos', 'https://tinyurl.com/rec10video'),
+       (4, 'Imagen', 'Infografía de Programación Orientada a Objetos', 'https://tinyurl.com/rec11imagen'),
+       (4, 'Otro', 'Apuntes de Cálculo I', 'https://tinyurl.com/rec12otro');

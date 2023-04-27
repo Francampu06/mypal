@@ -1,0 +1,36 @@
+/*
+Tabla: mensajes
+Almacena información de los mensajes intercambiados entre usuarios, incluyendo los IDs del emisor y del receptor, el contenido del mensaje y la fecha y hora en que fue enviado.
+
+Datos de muestra:
+- 25 registros de mensajes ficticios relacionados con tareas.
+- Cada mensaje tiene al menos una respuesta.
+*/
+
+INSERT INTO mensajes (id_emisor, id_receptor, contenido, fecha_hora)
+VALUES (1, 2, '¿Puedes ayudarme con la Tarea 1 de Cálculo I?', '2023-04-26 15:00:00'),
+       (2, 1, 'Claro, ¿en qué parte necesitas ayuda?', '2023-04-26 15:10:00'),
+       (3, 4, '¿Tienes el enunciado de la Tarea 2 de Álgebra Lineal?', '2023-04-26 16:00:00'),
+       (4, 3, 'Sí, te lo envío por correo.', '2023-04-26 16:15:00'),
+       (5, 6, '¿Cómo hiciste el ejercicio 3 de la Tarea 1 de Física I?', '2023-04-26 17:00:00'),
+       (6, 5, 'Usé la segunda ley de Newton y despejé la aceleración.', '2023-04-26 17:30:00'),
+       (7, 8, '¿Vamos a reunirnos para hacer la Tarea 2 de Química?', '2023-04-26 18:00:00'),
+       (8, 7, 'Sí, mañana a las 3pm en la biblioteca.', '2023-04-26 18:05:00'),
+       (9, 10, 'Necesito ayuda con la Tarea 1 de Cálculo II, ¿puedes?', '2023-04-26 19:00:00'),
+       (10, 9, 'Claro, dime cuál ejercicio te está dando problemas.', '2023-04-26 19:15:00'),
+       (1, 3, '¿Alguien tiene las respuestas de la Tarea 1 de Física II?', '2023-04-27 10:00:00'),
+       (3, 1, 'No tengo las respuestas, pero puedo ayudarte a resolverla.', '2023-04-27 10:30:00'),
+       (2, 4, '¿Has terminado la Tarea 1 de Estructuras de Datos?', '2023-04-27 11:00:00'),
+       (4, 2, 'Sí, la terminé ayer. ¿Necesitas algo?', '2023-04-27 11:20:00'),
+       (5, 7, 'Estoy atascado en la Tarea 2 de Programación Orientada a Objetos, ¿puedes ayudarme?', '2023-04-27 12:00:00'),
+       (7, 5, 'Sí, dime qué parte no entiendes.', '2023-04-27 12:30:00'),
+(8, 6, '¿Cuál es el plazo para entregar la Tarea 1 de Teoría de Circuitos?', '2023-04-27 13:00:00'),
+(6, 8, 'El plazo es hasta el 5 de mayo.', '2023-04-27 13:15:00'),
+(9, 10, 'No entiendo cómo resolver el problema 2 de la Tarea 1 de Métodos Numéricos.', '2023-04-27 14:00:00'),
+(10, 9, 'Podemos reunirnos en el aula de estudio a las 5pm y te explico.', '2023-04-27 14:30:00'),
+(1, 5, '¿Cuándo vamos a entregar la Tarea 1 de Cálculo II?', '2023-04-27 15:00:00'),
+(5, 1, 'Tenemos hasta el 3 de mayo para entregarla.', '2023-04-27 15:15:00'),
+(2, 3, '¿Puedes pasarme el enlace del video que explicaba la Tarea 2 de Estructuras de Datos?', '2023-04-27 16:00:00'),
+(3, 2, 'Claro, te lo envío por correo.', '2023-04-27 16:15:00'),
+(4, 8, '¿Quieres estudiar juntos para la Tarea 2 de Programación Orientada a Objetos?', '2023-04-27 17:00:00'),
+(8, 4, 'Sí, nos vemos en el aula de estudio a las 6pm.', '2023-04-27 17:15:00');

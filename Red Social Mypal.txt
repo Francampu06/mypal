@@ -1,0 +1,74 @@
+/*
+Red Social Universitaria - Base de Datos
+
+Esta base de datos está diseñada para gestionar una red social orientada a estudiantes universitarios. La red social permite a los usuarios compartir tareas, agendas de asignaciones, recursos (videos, libros PDF, presentaciones, etc.) y comunicarse de forma sincrónica con sus compañeros.
+
+Tablas:
+- usuarios: Almacena información de los estudiantes, incluyendo nombre, apellido, correo electrónico, contraseña, universidad y carrera.
+- cursos: Almacena información de los cursos que toman los estudiantes, como el nombre del curso, código del curso y semestre.
+- usuarios_cursos: Relaciona a los estudiantes con sus cursos.
+- tareas: Almacena información de las tareas y asignaciones de cada curso, como el nombre de la tarea, descripción y fecha de entrega.
+- recursos: Almacena información de los recursos compartidos en cada curso, como videos, libros PDF, presentaciones, etc.
+- mensajes: Almacena información de los mensajes enviados entre usuarios, incluyendo el contenido y la fecha y hora del mensaje.
+
+La base de datos utiliza SQLite y puede ser adaptada o expandida según las necesidades específicas de la red social.
+*/
+
+-- Crear tabla usuarios
+CREATE TABLE IF NOT EXISTS usuarios (
+    id_usuario INTEGER PRIMARY KEY,
+    nombre TEXT,
+    apellido TEXT,
+    correo_electronico TEXT UNIQUE,
+    contraseña TEXT,
+    universidad TEXT,
+    carrera TEXT
+);
+
+-- Crear tabla cursos
+CREATE TABLE IF NOT EXISTS cursos (
+    id_curso INTEGER PRIMARY KEY,
+    nombre_curso TEXT,
+    codigo_curso TEXT,
+    semestre INTEGER
+);
+
+-- Crear tabla usuarios_cursos
+CREATE TABLE IF NOT EXISTS usuarios_cursos (
+    id_usuario_curso INTEGER PRIMARY KEY,
+    id_usuario INTEGER,
+    id_curso INTEGER,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario),
+    FOREIGN KEY (id_curso) REFERENCES cursos (id_curso)
+);
+
+-- Crear tabla tareas
+CREATE TABLE IF NOT EXISTS tareas (
+    id_tarea INTEGER PRIMARY KEY,
+    id_curso INTEGER,
+    nombre_tarea TEXT,
+    descripcion TEXT,
+    fecha_entrega TEXT,
+    FOREIGN KEY (id_curso) REFERENCES cursos (id_curso)
+);
+
+-- Crear tabla recursos
+CREATE TABLE IF NOT EXISTS recursos (
+    id_recurso INTEGER PRIMARY KEY,
+    id_curso INTEGER,
+    tipo_recurso TEXT,
+    titulo TEXT,
+    enlace TEXT,
+    FOREIGN KEY (id_curso) REFERENCES cursos (id_curso)
+);
+
+-- Crear tabla mensajes
+CREATE TABLE IF NOT EXISTS mensajes (
+    id_mensaje INTEGER PRIMARY KEY,
+    id_emisor INTEGER,
+    id_receptor INTEGER,
+    contenido TEXT,
+    fecha_hora TEXT,
+    FOREIGN KEY (id_emisor) REFERENCES usuarios (id_usuario),
+    FOREIGN KEY (id_receptor) REFERENCES usuarios (id_usuario)
+);

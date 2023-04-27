@@ -1,0 +1,26 @@
+/*
+Tabla: tareas
+Almacena información de tareas asignadas en los cursos, incluyendo el ID del curso, el nombre de la tarea, la descripción y la fecha de entrega.
+
+Datos de muestra:
+- 15 registros de tareas ficticias asignadas a diferentes cursos.
+- Algunos cursos tienen una tarea, otros tienen dos.
+- Fechas de entrega aleatorias entre la fecha actual y el 12 de mayo.
+*/
+
+INSERT INTO tareas (id_curso, nombre_tarea, descripcion, fecha_entrega)
+VALUES (1, 'Tarea 1', 'Resolver ejercicios del capítulo 1', '2023-05-02'),
+       (2, 'Tarea 1', 'Resolver ejercicios de la sección A', '2023-05-04'),
+       (2, 'Tarea 2', 'Resolver ejercicios de la sección B', '2023-05-08'),
+       (3, 'Tarea 1', 'Realizar experimento de laboratorio', '2023-05-01'),
+       (3, 'Tarea 2', 'Redactar informe del experimento', '2023-05-07'),
+       (4, 'Tarea 1', 'Investigar sobre elementos químicos', '2023-04-30'),
+       (5, 'Tarea 1', 'Resolver ejercicios del capítulo 4', '2023-05-03'),
+       (5, 'Tarea 2', 'Resolver ejercicios del capítulo 5', '2023-05-09'),
+       (6, 'Tarea 1', 'Realizar experimento de laboratorio', '2023-05-01'),
+       (7, 'Tarea 1', 'Implementar estructuras de datos en Python', '2023-05-02'),
+       (7, 'Tarea 2', 'Realizar pruebas unitarias', '2023-05-11'),
+       (8, 'Tarea 1', 'Implementar una aplicación en Java', '2023-05-04'),
+       (9, 'Tarea 1', 'Analizar circuitos eléctricos', '2023-05-05'),
+       (9, 'Tarea 2', 'Simular circuitos en software', '2023-05-10'),
+       (10, 'Tarea 1', 'Resolver problemas de ecuaciones diferenciales', '2023-05-03');

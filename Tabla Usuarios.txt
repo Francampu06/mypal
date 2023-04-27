@@ -1,0 +1,23 @@
+/*
+Tabla: usuarios
+Almacena información de los estudiantes, incluyendo nombre, apellido, correo electrónico, contraseña (hash), universidad y carrera.
+
+Datos de muestra:
+- 10 registros de usuarios ficticios con nombres de personas reales.
+- Contraseñas simuladas con hashes largos, como los generados por bcrypt.
+- Universidades seleccionadas de entre las opciones: UAPA, O&M, UASD, UTE, UTESA, UFHEC, UNICARIBE.
+- Carreras de ingeniería.
+*/
+
+INSERT INTO usuarios (nombre, apellido, correo_electronico, contraseña, universidad, carrera)
+VALUES ('Juan', 'Pérez', 'juan.perez@example.com', '$2a$10$D8e8W0jepHdwh0h1KQDz5eWx/h0I0c9XKP5K5LhZ6iGjKdN15fYwG', 'UAPA', 'Ingeniería Civil'),
+       ('Ana', 'Martínez', 'ana.martinez@example.com', '$2a$10$VnTgT0i7VdWse8zNMeDj0.FJdxG1BNSI8epr9x9tCk0Q0NW.GWGYa', 'O&M', 'Ingeniería de Sistemas'),
+       ('Luis', 'Rodríguez', 'luis.rodriguez@example.com', '$2a$10$UB5M5Y1c9K1J4G4a87ovNOaIy8EoCfzLjBwNOI8Pd4C4G0ef4yF4G', 'UASD', 'Ingeniería Eléctrica'),
+       ('Carla', 'Ramírez', 'carla.ramirez@example.com', '$2a$10$2YRz0Zx8l8KwJU6D04q7T.qTjK9E7MczIhJXYG7CLr1F1K8BsKfKa', 'UTE', 'Ingeniería Mecánica'),
+       ('Miguel', 'González', 'miguel.gonzalez@example.com', '$2a$10$8WzrXF7v.l0YztgHf1K8F.Cnc0lVlU6Nvef7aD5el5nI7.iBtM5zS', 'UTESA', 'Ingeniería Electrónica'),
+       ('Sofía', 'Fernández', 'sofia.fernandez@example.com', '$2a$10$wQ2l1KlJhX9mScCmLc3qz.nmZGp8DxYGaJwE2M1TyCUXRJLPU5NtC', 'UFHEC', 'Ingeniería Industrial'),
+       ('Daniel', 'Morales', 'daniel.morales@example.com', '$2a$10$DfFLr1Z8Xd75W0Mw7IuP6OgxV7U9l6Uzv6YQY6LzZ6WTuA6UJw7Je', 'UNICARIBE', 'Ingeniería en Telecomunicaciones'),
+       ('Isabel', 'García', 'isabel.garcia@example.com', '$2a$10$A5Dvul5W5Kj4ZVMg4Zn0J.Hb8W7gIyXjKob7oeuEYR39VJxuIgBY.', 'UASD', 'Ingeniería en Informática'),
+       ('Carlos', 'Hernández', 'carlos.hernandez@example.com', '$2a$10$pRjbj0r6bmJiLPzgj0AEYun6BDMie6x2Q0zQBL6f0o6P7KjGQlN9y', 'UAPA', 'Ingeniería Ambiental'),
+       ('Lucía', 'Torres', 'lucia.torres@example.com', '$2a$10$yvzPZ7jDxSEz1otGsz3qJ..yjqh9EB9fubGHi2Y3d3hTcT1T0T0EW', 'UTE', 'Ingeniería Biomédica');
+
